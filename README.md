@@ -5,6 +5,23 @@ This repository includes code for the workflow and data analysis described in
 * Maria H. Rasmussen, Julius Seumer, and Jan H. Jensen. "De Novo Catalyst Discovery: Fast Identification of New Catalyst
 Candidates", _ChemRxiv_ (June 2023)
 
+
+## Meta-MD worflow
+Code for running and extracting reactions based on meta-MD simulations can be found in ```metaMD_worfklow```.
+The worfklow is set up to run on a cluster using the slurm workload manager by running
+```
+python control_metadyn_runs.py input_smiles.csv
+```
+where ```input_smiles.csv``` should contain a column labelled ```smiles``` with the reactant systems represented by mapped SMILES.
+Hyperparameters for the meta-MD runs can be changed in ```control_metadyn_runs.py```
+This will generate a directory for each reactant system (named by the index value in ```input_smiles.csv```
+After the calculations have finished, running 
+```
+python combine_runs.py input_smiles.csv
+```
+will generated .csv files containing the found mapped reaction SMILES and count for each reactant system.
+
+
 ## Data availability
 
 Data generated as part of the work described in the above paper is available [here](https://sid.erda.dk/sharelink/C4RVLJdhC5)
