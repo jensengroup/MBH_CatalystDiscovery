@@ -22,6 +22,20 @@ python combine_runs.py input_smiles.csv
 will generated .csv files containing the found mapped reaction SMILES and count for each reactant system.
 
 
+## Gibbs free energies for intermediates
+The Gibbs free energies for intermediates are obtained using Gaussian 16 - the code for the workflow is found in ```GibbsFreeEnergies_worklow```
+The calculations are done on individual molecules/fragments of the intermediates by running
+```
+python control_conf_search.py fragments.csv
+```
+```fragments.csv``` should contain a column named ```can_smiles``` containing canonical SMILES for all molecules/fragments 
+needed to obtain the intermediate energies. Subsequently the Gibbs free energies for the individual molecules are obtained running 
+```
+python extract_free_energies.py fragments.csv
+```
+which also checks for changes in the adjacency matrix and errors in embedding/optimization. This information is collected in a generated .csv file. 
+
+
 ## Data availability
 
 Data generated as part of the work described in the above paper is available [here](https://sid.erda.dk/sharelink/C4RVLJdhC5)
