@@ -114,9 +114,9 @@ if __name__ == "__main__":
             ac_check = check_acs(xyz_file_in, dft_file, charge)
             print(ac_check)
             df.loc[idx, "error_message"] = str(ac_check)
-            e_kcalmol = get_free_energy(dft_file)
-            print(idx, e_kcalmol)
-            df.loc[idx, 'Gibbs_kcal'] = e_kcalmol
+            e_Ha = get_free_energy(dft_file)
+            print(idx, e_Ha)
+            df.loc[idx, 'Gibbs_Ha'] = e_Ha
             e_sp_hartree = get_sp_energy(dft_file)
             print(idx, e_sp_hartree)
             df.loc[idx, 'sp_hartree'] = e_sp_hartree
