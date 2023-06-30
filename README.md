@@ -46,3 +46,10 @@ The data repository includes
 * .xyz files for fragments optimized at the B3LYP/6-31+G(d,p)/SMD(methanol) level of theory (fragment_energies_dft)
 * .xyz file for the transition state structures found (TS_structures) at the same level of theory
 * output files for the five genetic algorithm runs (GA_output)
+
+## Data Analysis
+The directory ```DataAnalysis``` contains example code for generating networks like those presented in the paper. Here we only look at reactions found 
+in the first iteration of meta-MD reactions (information about reaction collected in ```step1```).
+* ```nodes_dictionary.csv``` contains the SMILES to integer mapping used to generate the networks. 
+* ```node_energies_step1+2+3.csv``` contains energies for the intermediates calculated relative to the original reactant system. The energies are based on the Gibbs free energies 
+calculated for individual molecules using the above described code.
