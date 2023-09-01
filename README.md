@@ -53,3 +53,11 @@ in the first iteration of meta-MD reactions (information about reaction collecte
 * ```nodes_dictionary.csv``` contains the SMILES to integer mapping used to generate the networks. 
 * ```node_energies_step1+2+3.csv``` contains energies for the intermediates calculated relative to the original reactant system. The energies are based on the Gibbs free energies 
 calculated for individual molecules using the above described code.
+
+
+## Dependencies
+
+Information about the conda environment used to run the metaMD workflow is contained in ```MBH_environment.yml```
+The reaction discovery workflow relies on the meta-dynamics method in the xtb program. Specifically the results in the paper are obtained with xtb version 6.1.
+The DFT Gibbs free energies (for both intermediates and transition states) are obtained using Gaussian 16.
+For the genetic algorithm runs we use code published as part of Seumer et al., _Angew. Chem.Int. Ed._ **2023**, _62_: [GA GitHub repository](https://github.com/jensengroup/mbh_catalyst_ga) 
