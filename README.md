@@ -2,8 +2,8 @@
 
 This repository includes code for the workflow and data analysis described in 
 
-* Maria H. Rasmussen, Julius Seumer, and Jan H. Jensen. "De Novo Catalyst Discovery: Fast Identification of New Catalyst
-Candidates", _ChemRxiv_ (June 2023)
+* Maria H. Rasmussen, Julius Seumer, and Jan H. Jensen. "Toward De Novo Catalyst Discovery: Fast Identification of New Catalyst
+Candidates", _Angew. Chem. Int. Ed._ 2023, 62, e202310580
 
 
 ## Meta-MD worflow
